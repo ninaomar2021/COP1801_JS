@@ -1,0 +1,20 @@
+
+<html>
+<body>
+
+<button onclick="timedText()">Message</button>
+
+<p id="demo">Click on button and message will appear after 5 seconds.</p>
+
+<script>
+function timedText() {
+  setTimeout(myTimeout1, 5000)
+}
+function myTimeout1() {
+  document.getElementById("demo").innerHTML = "Hello World!";
+}
+
+</script>
+
+</body>
+</html>
