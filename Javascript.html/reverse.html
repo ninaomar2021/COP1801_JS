@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <p id="demo"></p>
+
+    <script>
+
+// Function to reverse string
+function ReverseString(name) {
+  var name = prompt("What is your first and last name?");
+  document.getElementById("demo").innerHTML = name;
+
+   return name.split("").reverse().join("");
+}
+
+// Function call
+document.write(ReverseString(name))
+</script>
+
+  </body>
+</html>
