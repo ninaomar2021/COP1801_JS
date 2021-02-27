@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1 style="font-size:16px;"> Enter string in the box and click button: </h1>
+  <style>
+    h1{
+      color: red;
+    }
+  </style>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        var str = $("#myInput").val();
+        var str = str.fontcolor("green");
+        document.write("Here is your input: " + str);
+    });
+});
+
+  </script>
+</head>
+<body>
+    <input type="text" id="myInput">
+    <button type="button" id="myBtn">Click to Display</button>
+</body>
+</html>
