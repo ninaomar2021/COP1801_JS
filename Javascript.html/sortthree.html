@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <style>
+  p {
+    color: Red;
+
+  }
+  </style>
+
+<h1 style="font-style:italic; color:blue; font-size:400%;">Loop to Sort</h1>
+
+<p>Here are the numbers out of order: </p>
+
+<script>
+
+  function display(ar){
+    document.write(ar);
+  }
+
+  function three_sort(ar) {
+
+    var i = 0, j
+    while (i < ar.length) {
+        j = i + 1;
+
+        while (j < ar.length) {
+
+            if (ar[j] < ar[i]) {
+                var temp = ar[i];
+                ar[i] = ar[j];
+                ar[j] = temp;
+            }
+            j++;
+        }
+        i++;
+    }
+
+}
+
+var arr = [12688, 27, 100];
+
+// show array
+document.write(arr);
+document.write("</br>");
+document.write("</br>");
+
+</script>
+
+<button onclick="three_sort(arr);display(arr)">Click to ascend</button>
+
+
+</body>
+</html>
