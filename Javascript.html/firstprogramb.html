@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1 style="font-size:16px;"> Enter your age: </h1>
+  <style>
+    h1{
+      color: teal;
+    }
+  </style>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        var str = $("#myInput").val();
+        var str = str.fontcolor("green");
+
+        condition(str);
+    });
+});
+
+function condition(){
+
+var mssg = $("#myInput").val();
+
+if (mssg >= 15 && mssg <= 25){
+  document.write("<span style=\"color:green;font-size:18px;font-weight:bold;\">You are between the age of 15 - 25, still so young<\/span>");
+} else if (mssg >= 26 && mssg <= 35){
+  document.write("<span style=\"color:red;font-size:18px;font-weight:bold;\">You are between the age of 26 - 35, still so young but fearing late thirties<\/span>");
+} else if (mssg >= 36 && mssg <= 45){
+  document.write("<span style=\"color:blue;font-size:18px;font-weight:bold;\">You are between the age of 36 - 45, you can't believe you are closing in on forties<\/span>");
+} else if (mssg >= 46 && mssg <= 55){
+  document.write("<span style=\"color:orange;font-size:24px;font-weight:bold;\">You are between the age of 46 - 55, its getting better, you are almost there to senior discounts<\/span>");
+} else if (mssg >= 56 && mssg <= 65){
+  document.write("<span style=\"color:purple;font-size:36px;font-weight:bold;\">You are between the age of 56 - 65, jackpot! are you retired yet?<\/span>");
+} else {
+  document.write("<span style=\"color:teal;font-weight:bold;font-size:44px;\">You are over 65, this is considered old age, are you signed up for medicare???<\/span>");
+}
+}
+
+  </script>
+</head>
+<body>
+
+    <input type="text" id="myInput">
+    <button type="button" id="myBtn">Click</button>
+</body>
+
+</html>
