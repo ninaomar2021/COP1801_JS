@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+th:hover {
+  font-family: fantasy;
+}
+
+  th {
+  border: 4px solid #808080;
+  padding: 12px;
+  color: Blue;
+  font-size: 18px;
+}
+
+ </style>
+
+<body>
+
+  <br />First name:
+  <input type="text" name="First Name" id="fname" />
+  <br /><br />Last name:
+  <input type="text" name="Last Name" id="lname" />
+  <br /><br />Address:
+  <input type="text" name="Address" id="address" />
+  <br /><br />
+  City:
+  <input type="text" name="City" id="city" />
+  <br /><br />
+  State:
+  <input type="text" name="State" id="state" />
+  <br /><br />
+  <input type="button" value="Add to table" onClick="addRow()" id="add">
+  <br /><br />
+  <table id="table" border="1">
+  <thead id="table-head">
+  <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+  </tr>
+  </thead>
+  <tbody id="table-body">
+  </tbody>
+  </table>
+
+  <script>
+  function addRow() {
+
+  var tableBody = document.getElementById("table-body");
+  var td1 = document.createElement("td");
+  var td2 = document.createElement("td");
+  var td3 = document.createElement("td");
+  var td4 = document.createElement("td");
+  var td5 = document.createElement("td");
+  var row = document.createElement("tr");
+
+  td1.innerHTML = document.getElementById("fname").value;
+  td2.innerHTML  = document.getElementById("lname").value;
+  td3.innerHTML  = document.getElementById("address").value;
+  td4.innerHTML  = document.getElementById("city").value;
+  td5.innerHTML  = document.getElementById("state").value;
+
+  row.appendChild(td1);
+  row.appendChild(td2);
+  row.appendChild(td3);
+  row.appendChild(td4);
+  row.appendChild(td5);
+
+  tableBody.appendChild(row);
+  }
+  </script>
+
+</body>
+</html>
